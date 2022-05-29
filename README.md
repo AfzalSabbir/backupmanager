@@ -1,12 +1,12 @@
 # Backpack\BackupManager
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/backpack/backupmanager.svg?style=flat-square)](https://packagist.org/packages/backpack/backupmanager)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/afzalsabbir/backupmanager.svg?style=flat-square)](https://packagist.org/packages/afzalsabbir/backupmanager)
 [![Software License](https://img.shields.io/badge/license-dual-blue?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/laravel-backpack/backupmanager/master.svg?style=flat-square)](https://travis-ci.org/laravel-backpack/backupmanager)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/laravel-backpack/backupmanager.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-backpack/backupmanager/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/laravel-backpack/backupmanager.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-backpack/backupmanager)
+[![Build Status](https://img.shields.io/travis/afzalsabbir/backupmanager/master.svg?style=flat-square)](https://travis-ci.org/afzalsabbir/backupmanager)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/afzalsabbir/backupmanager.svg?style=flat-square)](https://scrutinizer-ci.com/g/afzalsabbir/backupmanager/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/afzalsabbir/backupmanager.svg?style=flat-square)](https://scrutinizer-ci.com/g/afzalsabbir/backupmanager)
 [![Style CI](https://styleci.io/repos/53956594/shield)](https://styleci.io/repos/53956594)
-[![Total Downloads](https://img.shields.io/packagist/dt/backpack/backupmanager.svg?style=flat-square)](https://packagist.org/packages/backpack/backupmanager)
+[![Total Downloads](https://img.shields.io/packagist/dt/afzalsabbir/backupmanager.svg?style=flat-square)](https://packagist.org/packages/afzalsabbir/backupmanager)
 
 An admin interface for [spatie/laravel-backup](https://github.com/spatie/laravel-backup). Allows the admin to easily manage backups (download and delete). Used in the Backpack package, on Laravel 5.2+ to 9.
 
@@ -23,7 +23,7 @@ An admin interface for [spatie/laravel-backup](https://github.com/spatie/laravel
 
 ``` bash
 # Install the package
-composer require backpack/backupmanager
+composer require afzalsabbir/backupmanager
 
 # Publish the config file and lang files:
 php artisan vendor:publish --provider="Backpack\BackupManager\BackupManagerServiceProvider"  --tag=config
@@ -35,7 +35,7 @@ php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-lin
 2) Add a new "disk" to config/filesystems.php:
 
 ```php
-        // used for Backpack/BackupManager
+        // used for afzalsabbir/BackupManager
         'backups' => [
             'driver' => 'local',
             'root'   => storage_path('backups'), // that's where your backups are stored by default: storage/backups
@@ -94,12 +94,12 @@ Try at **your-project-domain/admin/backup**
 
 ## Upgrading from 2.x to 3.x
 
-Change your required version to ```"backpack/backupmanager": "^3.0",``` and run ```composer update```. There are no breaking changes just icons that are show using ```la la-icon``` instead of ```fa fa-icon```.
+Change your required version to ```"afzalsabbir/backupmanager": "^3.0",``` and run ```composer update```. There are no breaking changes just icons that are show using ```la la-icon``` instead of ```fa fa-icon```.
 
 
 ## Upgrading from 1.2.x to 1.3.x
 
-1) change your required version to ```"backpack/backupmanager": "^1.3",``` and run ```composer update```;
+1) change your required version to ```"afzalsabbir/backupmanager": "^1.3",``` and run ```composer update```;
 2) delete the old config file (too many changes, including namechange): ```rm config/laravel-backup.php```
 3) republish the config files: ```php artisan vendor:publish --provider="Backpack\BackupManager\BackupManagerServiceProvider"```
 4) change your db configuration in ```config/database.php``` to use the new dump configuration (all options in one array; the example below is for MAMP on MacOS):
@@ -118,7 +118,7 @@ Change your required version to ```"backpack/backupmanager": "^3.0",``` and run 
 
 ## Upgrading from 1.1.x to 1.2.x
 
-1) change your required version to ```"backpack/backupmanager": "^1.2",```;
+1) change your required version to ```"afzalsabbir/backupmanager": "^1.2",```;
 2) the only breaking change is that the ```config/database.php``` dump variables are now inside an array. Please see the step 8 above, copy-paste the ```dump``` array from there and customize;
 
 
@@ -139,7 +139,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Overwriting Functionality
 
 If you need to modify how this works in a project: 
-- create a ```routes/backpack/backupmanager.php``` file; the package will see that, and load _your_ routes file, instead of the one in the package; 
+- create a ```routes/afzalsabbir/backupmanager.php``` file; the package will see that, and load _your_ routes file, instead of the one in the package; 
 - create controllers/models that extend the ones in the package, and use those in your new routes file;
 - modify anything you'd like in the new controllers/models;
 
